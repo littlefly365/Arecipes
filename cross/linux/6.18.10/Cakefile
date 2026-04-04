@@ -1,0 +1,16 @@
+package = {
+    name = "linux-headers",
+    version = "6.18.10",
+    hash = "d6d377161741ada2fab28eed69143277634a2aeb5e3883e50c031588ede48ede",
+    source = "https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.18.10.tar.xz",
+    architecture = "x86_64",
+    branch = "cross",
+    build_style = "linux",
+    pre_build = "make mrproper",
+    make_target = "headers",
+
+    post_build = [[
+	find usr/include -type f ! -name '*.h' -delete
+	cp -rv usr/include /mnt/usr
+	]]
+}
