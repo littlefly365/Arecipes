@@ -1,0 +1,14 @@
+package = {
+    name = "dash",
+    version = "0.5.13.1",
+    hash = "d9271bce09c127d9866e25c011582ddc75ab988958a04bc4d8553a3b8f30e370",
+    source = "http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.13.1.tar.gz",
+    architecture = "x86_64",
+    branch = "user",
+    build_style = "gnu-configure",
+
+    configure_flags = {
+        "--bindir=/bin",
+        "--mandir=/usr/share/man"
+    }
+}

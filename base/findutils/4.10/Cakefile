@@ -1,0 +1,14 @@
+package = {
+    name = "findutils",
+    version = "4.10.0",
+    hash = "5be181b27ec38aad2450080661a64e4a1752bb29b7d5052bf0a02a70f623f9b2",
+    source = "1387e0b67ff247d2abde998f90dfbf70c1491391a59ddfecb8ae698789f0a4f5",
+    architecture = "x86_64",
+    branch = "base",
+    build_style = "gnu-configure",
+
+    configure_flags = {
+        "--prefix=/usr",
+	"--localstatedir=/var/lib/locate"
+    }
+}

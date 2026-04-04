@@ -1,0 +1,13 @@
+package = {
+    name = "diffutils",
+    version = "3.12",
+    hash = "5be181b27ec38aad2450080661a64e4a1752bb29b7d5052bf0a02a70f623f9b2",
+    source = "https://ftp.gnu.org/gnu/diffutils/diffutils-3.12.tar.gz",
+    architecture = "x86_64",
+    branch = "base",
+    build_style = "gnu-configure",
+
+    configure_flags = {
+        "--prefix=/usr"
+    }
+}
