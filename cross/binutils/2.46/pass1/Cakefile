@@ -1,0 +1,21 @@
+package = {
+    name = "binutils",
+    version = "2.46",
+    hash = "4b4c189824b9c3ae483e056ade8d5265e876aea1dedd76dc3ca81bad77b02f03",
+    source = "https://ftp.gnu.org/gnu/binutils/binutils-with-gold-2.46.tar.gz",
+    architecture = "x86_64",
+    branch = "cross",
+    build_style = "gnu-configure",
+    buildir = true,
+
+    configure_flags = {
+        "--prefix=/mnt/cross",
+        "--with-sysroot=/mnt",
+        "--target=x86_64-aqua-linux-musl",
+        "--disable-nls",
+        "--enable-gprofng=no",
+        "--disable-werror",
+        "--enable-new-dtags",
+        "--enable-default-hash-style=gnu"
+    }
+}

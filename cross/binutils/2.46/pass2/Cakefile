@@ -6,15 +6,20 @@ package = {
     architecture = "x86_64",
     branch = "cross",
     build_style = "gnu-configure",
-    buildir = "yes",
+    buildir = true,
+    
+    pre_build = "sed '6031s/$add_dir//' -i ltmain.sh",
+    post_build = "rm -v /mnt/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}",
 
     configure_flags = {
-        "--prefix=/mnt/cross",
-        "--with-sysroot=/mnt",
-        "--target=x86_64-aqua-linux-musl",
+        "--prefix=/usr",
+        "--build=$(../config.guess)",
+        "--host=x86_64-aqua-linux-musl",
         "--disable-nls",
-        "--enable-gprofng",
+        "--enable-shared",
+        "--enable-gprofng=no",
         "--disable-werror",
+        "--enable-64-bit-bfd",
         "--enable-new-dtags",
         "--enable-default-hash-style=gnu"
     }

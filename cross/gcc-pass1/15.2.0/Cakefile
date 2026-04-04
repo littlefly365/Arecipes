@@ -6,7 +6,7 @@ package = {
     architecture = "x86_64",
     branch = "cross",
     build_style = "gnu-configure",
-    buildir = "yes",
+    buildir = true,
 
     configure_flags = {
         "--target=x86_64-aqua-linux-musl",
