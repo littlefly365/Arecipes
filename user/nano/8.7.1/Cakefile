@@ -1,0 +1,16 @@
+package = {
+    name = "nano",
+    version = "8.7.1",
+    hash = "76f0dcb248f2e2f1251d4ecd20fd30fb400a360a3a37c6c340e0a52c2d1cdedf",
+    source = "https://www.nano-editor.org/dist/v8/nano-8.7.1.tar.xz",
+    architecture = "x86_64",
+    branch = "user",
+    build_style = "gnu-configure",
+
+    configure_flags = {
+        "--prefix=/usr",
+        "--sysconfdir=/etc",
+        "--enable-utf8",
+        "--docdir=/usr/share/doc/nano-8.7.1"
+    }
+}
