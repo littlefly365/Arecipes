@@ -6,6 +6,7 @@ package = {
     architecture = "x86_64",
     branch = "cross",
     build_style = "gnu-configure",
+    buildir = "yes",
 
     configure_flags = {
         "--prefix=/mnt/cross",
